@@ -1,0 +1,18 @@
+c:\users\jale\documents\visual studio 2015\Projects\ContractSearchApp\ContractSearchApp\bin\Debug\ContractSearchApp.exe.config
+c:\users\jale\documents\visual studio 2015\Projects\ContractSearchApp\ContractSearchApp\bin\Debug\ContractSearchApp.exe
+c:\users\jale\documents\visual studio 2015\Projects\ContractSearchApp\ContractSearchApp\bin\Debug\ContractSearchApp.pdb
+c:\users\jale\documents\visual studio 2015\Projects\ContractSearchApp\ContractSearchApp\obj\Debug\ContractSearchApp.csprojResolveAssemblyReference.cache
+c:\users\jale\documents\visual studio 2015\Projects\ContractSearchApp\ContractSearchApp\obj\Debug\ContractSearchApp.MainForm.resources
+c:\users\jale\documents\visual studio 2015\Projects\ContractSearchApp\ContractSearchApp\obj\Debug\ContractSearchApp.Properties.Resources.resources
+c:\users\jale\documents\visual studio 2015\Projects\ContractSearchApp\ContractSearchApp\obj\Debug\ContractSearchApp.csproj.GenerateResource.Cache
+c:\users\jale\documents\visual studio 2015\Projects\ContractSearchApp\ContractSearchApp\obj\Debug\ContractSearchApp.exe
+c:\users\jale\documents\visual studio 2015\Projects\ContractSearchApp\ContractSearchApp\obj\Debug\ContractSearchApp.pdb
+D:\Projects\ContractSearchApp\ContractSearchApp\bin\Debug\ContractSearchApp.exe.config
+D:\Projects\ContractSearchApp\ContractSearchApp\obj\Debug\ContractSearchApp.exe
+D:\Projects\ContractSearchApp\ContractSearchApp\obj\Debug\ContractSearchApp.pdb
+D:\Projects\ContractSearchApp\ContractSearchApp\bin\Debug\ContractSearchApp.exe
+D:\Projects\ContractSearchApp\ContractSearchApp\bin\Debug\ContractSearchApp.pdb
+D:\Projects\ContractSearchApp\ContractSearchApp\obj\Debug\ContractSearchApp.csprojResolveAssemblyReference.cache
+D:\Projects\ContractSearchApp\ContractSearchApp\obj\Debug\ContractSearchApp.MainForm.resources
+D:\Projects\ContractSearchApp\ContractSearchApp\obj\Debug\ContractSearchApp.Properties.Resources.resources
+D:\Projects\ContractSearchApp\ContractSearchApp\obj\Debug\ContractSearchApp.csproj.GenerateResource.Cache
