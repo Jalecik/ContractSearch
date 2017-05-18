@@ -1,0 +1,21 @@
+{{#if data}}
+<h3>Result for {{query}}</h3>
+    <div class="row">
+        {{#each data}}
+        <div class="col-md-4">
+            <a href="/product/{{_id}}">
+                <div class="thumbnail">
+                    <img src="{{ _source.image}}" alt="">
+                    <div class="caption">
+                        <h3>{{ _source.name}}</h3>
+                        <p>{{ _source.category.name}}</p>
+                        {{ _source.price}}
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{/each}}
+    </div>
+{{else}}
+<h3>Not found</h3>
+{{/if}}

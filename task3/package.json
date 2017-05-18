@@ -1,0 +1,26 @@
+{
+  "name": "task3",
+  "version": "1.0.0",
+  "description": "task",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./web/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Khumar",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "connect-mongo": "^1.3.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "express-flash": "0.0.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.2",
+    "mongoosastic": "^4.3.0",
+    "mongoose": "^4.9.5",
+    "morgan": "^1.8.1",
+    "nodemon": "^1.11.0",
+    "passport-local": "^1.0.0"
+  }
+}

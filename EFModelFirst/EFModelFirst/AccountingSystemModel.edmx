@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="AccountingSystemModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+        <EntityContainer Name="AccountingSystemModelTargetContainer" >
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="AccountingSystemModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="AccountingSystemContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="InvoiceHeaders" EntityType="AccountingSystemModel.InvoiceHeader" />
+          <EntitySet Name="InvoiceDetails" EntityType="AccountingSystemModel.InvoiceDetail" />
+          <AssociationSet Name="InvoiceHeaderInvoiceDetail" Association="AccountingSystemModel.InvoiceHeaderInvoiceDetail">
+            <End Role="InvoiceHeader" EntitySet="InvoiceHeaders" />
+            <End Role="InvoiceDetail" EntitySet="InvoiceDetails" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="InvoiceHeader">
+          <Key>
+            <PropertyRef Name="InvoiceHeader_Id" />
+          </Key>
+          <Property Name="InvoiceHeader_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Total" Type="Decimal" Nullable="false" />
+          <NavigationProperty Name="InvoiceDetails" Relationship="AccountingSystemModel.InvoiceHeaderInvoiceDetail" FromRole="InvoiceHeader" ToRole="InvoiceDetail" />
+        </EntityType>
+        <EntityType Name="InvoiceDetail">
+          <Key>
+            <PropertyRef Name="InvoiceDetail_Id" />
+          </Key>
+          <Property Name="InvoiceDetail_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemDescription" Type="String" Nullable="false" />
+          <Property Name="Quantity" Type="String" Nullable="false" />
+          <Property Name="Price" Type="String" Nullable="false" />
+          <NavigationProperty Name="InvoiceHeader" Relationship="AccountingSystemModel.InvoiceHeaderInvoiceDetail" FromRole="InvoiceDetail" ToRole="InvoiceHeader" />
+          <Property Name="InvoiceHeaderInvoiceHeader_Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="InvoiceHeaderInvoiceDetail">
+          <End Type="AccountingSystemModel.InvoiceHeader" Role="InvoiceHeader" Multiplicity="1" />
+          <End Type="AccountingSystemModel.InvoiceDetail" Role="InvoiceDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InvoiceHeader">
+              <PropertyRef Name="InvoiceHeader_Id" />
+            </Principal>
+            <Dependent Role="InvoiceDetail">
+              <PropertyRef Name="InvoiceHeaderInvoiceHeader_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="AccountingSystemModel" />
+        <Alias Key="Target" Value="AccountingSystemModel.Store" />
+        <EntityContainerMapping CdmEntityContainer="AccountingSystemContainer" StorageEntityContainer="AccountingSystemModelTargetContainer">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

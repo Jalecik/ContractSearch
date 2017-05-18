@@ -1,0 +1,15 @@
+{
+  "name": "expressdemo",
+  "version": "1.0.0",
+  "description": "Turorial",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ismayil Malik",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}

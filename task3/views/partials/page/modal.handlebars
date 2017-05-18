@@ -1,0 +1,42 @@
+<div class="modal fade" id="modalSingup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content modal-popup">
+			<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+			<h3 class="white">Sign Up</h3>
+			{{#if errors}}
+			<div class="alert alert-danger alert-dismissible">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             		<span aria-hidden="true">&times;</span>
+        		</button> {{errors}}
+			</div>
+			{{/if}}
+			<form  class="popup-form" method="POST">
+				<input type="text" class="form-control form-white" placeholder="Full Name" name="name">
+				<input type="text" class="form-control form-white" placeholder="Email Address" name="email">
+				<input type="password" class="form-control form-white" name="password">
+				<button type="submit" class="btn btn-submit">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content modal-popup">
+			<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+			<h3 class="white">Login</h3>
+			{{#if errors}}
+			<div class="alert alert-danger alert-dismissible">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             		<span aria-hidden="true">&times;</span>
+        		</button> {{errors}}
+			</div>
+			{{/if}}
+			<form action="" class="popup-form" method="POST">
+				<input type="text" class="form-control form-white" placeholder="Email Address" name="email">
+				<input type="password" class="form-control form-white" name="password">
+				<button type="submit" class="btn btn-submit">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>

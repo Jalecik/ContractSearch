@@ -1,0 +1,18 @@
+﻿@model IEnumerable<MVC.Models.Persons>
+@{
+    ViewBag.Title = "GetPersons";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <div>
+        <h1> </h1>
+        @Html.Raw(Json.Encode(item.Name))
+        @Html.Raw(Json.Encode(item.Surname))
+        @Html.Raw(Json.Encode(item.Age))
+        @Html.Raw(Json.Encode(item.NickName))
+        <hr/>
+    </div>
+}
+    

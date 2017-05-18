@@ -1,0 +1,49 @@
+<style>
+    .fb-profile img.fb-image-lg {
+        z-index: 0;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .fb-image-profile {
+        margin: -90px 10px 0px 50px;
+        z-index: 9;
+        width: 20%;
+    }
+    
+    @media (max-width:768px) {
+        .fb-profile-text>h1 {
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .fb-image-profile {
+            margin: -45px 10px 0px 25px;
+            z-index: 9;
+            width: 20%;
+        }
+    }
+</style>
+
+
+<div class="container">
+    <div class="fb-profile">
+        <img align="left" class="fb-image-lg" src="http://lorempixel.com/850/280/nightlife/5/" alt="Profile image example" />
+        <img align="left" class="fb-image-profile thumbnail" src="{{user.profile.picture}}" alt="Profile image example" />
+        <div class="fb-profile-text">
+            <h1>{{ user.profile.name}}</h1>
+            <p>Happpppppyyyyyyyyyy code.</p>
+            <p>Email: {{user.email}} </p>
+
+            {{# if user.address }}
+            <p>Address: {{user.address}}</p>
+
+            {{else}}
+            <p>You have no address</p>
+            {{/if}}
+            <a href="/edit-profile" class="btn btn-primary">Edit</button>
+            <a href="/">Home page</a>
+        </div>
+    </div>
+</div>
+
+{{>page/footer}}

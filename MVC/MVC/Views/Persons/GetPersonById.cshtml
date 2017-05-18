@@ -1,0 +1,16 @@
+﻿@model MVC.Models.Persons
+
+@{
+    ViewBag.Title = "GetPersonById";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h1>List</h1>
+    @Html.Raw(Json.Encode(Model.Id))
+    @Html.Raw(Json.Encode(Model.Name))
+    @Html.Raw(Json.Encode(Model.Surname))
+
+    <hr />
+</div>
+
